@@ -1,0 +1,8 @@
+# print a bell character when a server is down?
+bell=1
+
+# list of checked domains
+hosts=(
+	google.com
+	rummik.com
+)
