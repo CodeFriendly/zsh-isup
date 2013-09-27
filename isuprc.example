@@ -5,4 +5,7 @@ bell=1
 hosts=(
 	google.com
 	rummik.com
+
+	# post data using '-d key=value'
+	#'yoursite.tld/login -d user=foo&pass=bar'
 )
