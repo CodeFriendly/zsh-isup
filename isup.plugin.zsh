@@ -2,6 +2,7 @@
 
 # usage: isup [host]
 function isup() {
+	emulate -L zsh
 	autoload colors
 	[[ $terminfo[colors] -ge 8 ]] && colors
 
