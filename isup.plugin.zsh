@@ -1,4 +1,5 @@
 #!/bin/zsh
+ISUP=${0:h}
 
 # usage: isup [host]
 function isup() {
@@ -15,7 +16,7 @@ function isup() {
 	else
 		if [[ ! -e ~/.isuprc ]]; then
 			print Creating $HOME/.isuprc...
-			cp ${0:h}/isuprc.example ~/.isuprc
+			cp $ISUP/isuprc.example ~/.isuprc
 		fi
 
 		. ~/.isuprc
