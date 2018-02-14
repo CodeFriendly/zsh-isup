@@ -29,7 +29,7 @@ function isup() {
 		out=(${(s/ /)"$(curl -L -w '%{http_code} %{time_total} %{time_namelookup} %{time_connect} %{time_appconnect} %{time_pretransfer} %{time_redirect} %{time_starttransfer}' -so/dev/null --connect-timeout 5 $host)"})
 
 		http_code=$out[1]
-		dns_time=$out[3]
+		dns_time=$(printf '%.3f' $out[3])
 		req_time=$(printf '%.3f' $(($out[2] - $out[3])))
 
 		if [[ $http_code -eq 000 ]]; then
